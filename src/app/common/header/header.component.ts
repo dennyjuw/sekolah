@@ -5,7 +5,7 @@ import { GetAccountComponent } from '../../services/get-account/get-account.comp
   selector: 'app-header',
   providers: [GetAccountComponent],
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
 
@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
 
   constructor(private getAccountService: GetAccountComponent) { 
     this.nameList = getAccountService.getAccountData();
-    console.log(this.nameList);
+    console.log(this.nameList);  
   }
 
   ngOnInit() {
