@@ -9,14 +9,18 @@ import { GetAccountComponent } from '../../services/get-account/get-account.comp
 })
 export class HeaderComponent implements OnInit {
 
-  nameList: Array<String>
+  userData;
 
-  constructor(private getAccountService: GetAccountComponent) { 
-    this.nameList = getAccountService.getAccountData();
-    console.log(this.nameList);  
+  constructor(private getAccountService: GetAccountComponent) {   
   }
 
   ngOnInit() {
+    this.userData = this.getAccountService.getUserData();
+    console.log(this.userData.userId);
+  }
+
+  toggleMenu() {
+    console.log('toggle menu');
   }
 
 }

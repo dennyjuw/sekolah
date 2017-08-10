@@ -1,3 +1,19 @@
-<p>
-  header works!
-</p>
+<header class="header clearfix">
+  <div class="header-school-logo pull-left">
+    <img src="{{userData.school.logo}}">
+    {{userData.school.name}}
+  </div>
+  <div class="header-user pull-right display-flex" (click)="toggleMenu()">
+    <div class="header-user-pic">
+      <img src="{{userData.profilePicture}}">
+    </div>
+    <div>
+      <div class="header-user-name">
+        {{userData.firstName}} {{userData.lastName}}
+      </div>
+      <div class="header-user-email">
+        {{userData.email}}
+      </div>
+    </div>
+  </div>
+</header>
