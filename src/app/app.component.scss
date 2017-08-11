@@ -1,0 +1,15 @@
+@import '~app/styles/variables.scss';
+
+.side-nav {
+  background-color: $whiteSmoke;
+  box-shadow: inset -1px 0 0 0 $mercury;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  padding-top: 95px;
+  width: 250px;
+}
+.main-content {
+  padding-left: 250px;
+}

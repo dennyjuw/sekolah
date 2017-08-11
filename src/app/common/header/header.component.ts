@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { GetAccountComponent } from '../../services/get-account/get-account.component';
+import { AccountService } from '../../services/account/account.service';
 
 @Component({
   selector: 'app-header',
-  providers: [GetAccountComponent],
+  providers: [AccountService],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
@@ -11,11 +11,11 @@ export class HeaderComponent implements OnInit {
 
   userData;
 
-  constructor(private getAccountService: GetAccountComponent) {   
+  constructor(private accountService: AccountService) {
   }
 
   ngOnInit() {
-    this.userData = this.getAccountService.getUserData();
+    this.userData = this.accountService.getUserData();
     console.log(this.userData.userId);
   }
 

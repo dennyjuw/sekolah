@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { NavigationComponent } from './common/navigation/navigation.component';
-import { GetAccountComponent } from './services/get-account/get-account.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { TeacherListComponent } from './components/teacher-list/teacher-list.component';
 import { StudentListComponent } from './components/student-list/student-list.component';
@@ -19,7 +18,7 @@ export const ROUTES: Routes = [
   { path: 'teacher/:teachername', component: TeacherListComponent},
   { path: 'staff', component: StaffListComponent },
   { path: 'student', component: StudentListComponent },
-];  
+];
 
 @NgModule({
   declarations: [
@@ -27,7 +26,6 @@ export const ROUTES: Routes = [
     HeaderComponent,
     FooterComponent,
     NavigationComponent,
-    GetAccountComponent,
     DashboardComponent,
     TeacherListComponent,
     StudentListComponent,

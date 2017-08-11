@@ -1,21 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 
-@Component({
-  selector: 'app-get-account',
-  templateUrl: './get-account.component.html',
-  styleUrls: ['./get-account.component.scss']
-})
-export class GetAccountComponent implements OnInit {
+@Injectable()
+export class TeacherService {
 
   constructor() { }
 
-  ngOnInit() {
-  }
 
-  getUserData() {
+  getTeacherList() {
     return ({
       userId: 42,
-      firstName: 'Budi',
+      firstName: 'Budia',
       lastName: 'Budiman',
       email: 'budi.budiman@sekolahph.com',
       role: 'Guru',
@@ -26,4 +20,23 @@ export class GetAccountComponent implements OnInit {
       }
     });
   }
+
+  addTeacher() {
+    return '';
+  }
+
+  editTeacher() {
+    return '';
+  }
+
+  removeTeacher() {
+    return '';
+  }
+
+  assignTeacherToClass(id, class) {
+    return '';
+  }
+
+
+
 }
