@@ -1,13 +1,13 @@
 <nav>
   <ul>
-    <li><a routerLink="/">Dashboard</a></li>
+    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" >Dashboard</a></li>
   </ul>
   <ul>
-    <li><a routerLink="/teacher">Teacher list</a></li>
+    <li><a routerLink="/teacher" routerLinkActive="active">Teacher list</a></li>
   </ul>
   <ul>
-    <li><a routerLink="/staff">Staff list</a></li>
-    <li><a routerLink="/student">Student list</a></li>
+    <li><a routerLink="/staff" routerLinkActive="active">Staff list</a></li>
+    <li><a routerLink="/student" routerLinkActive="active">Student list</a></li>
     <li><a routerLink="">School performance</a></li>
   </ul>
 </nav>
