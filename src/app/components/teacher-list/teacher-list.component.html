@@ -1,3 +1,17 @@
-<p>
-  teacher-list works!
-</p>
+<table>
+  <caption>
+    Teacher list
+  </caption>
+  <thead>
+    <tr>
+      <td>First name</td>
+      <td>Last name</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let teacher of teacherList">
+      <td>{{teacher.firstName}}</td>
+      <td>{{teacher.lastName}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -3,40 +3,64 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class TeacherService {
 
+  teacherListMock = {
+    error: false,
+    teacherList: [
+      {
+        id: 22,
+        firstName: 'Ferry',
+        lastName: 'Gunawan',
+        email: 'ferry.gunawann@sekolahph.com',
+        profilePicture: 'http://via.placeholder.com/55x55',
+        address: '',
+        phone: '62230108',
+        mobile: '08125506000',
+        subject: '',
+        class: ''
+      },
+      {
+        id: 32,
+        firstName: 'Santo',
+        lastName: 'Rajasa',
+        email: 'santo.rajasa@sekolahph.com',
+        profilePicture: 'http://via.placeholder.com/55x55',
+        address: '',
+        phone: '62230108',
+        mobile: '08125506000',
+        subject: '',
+        class: ''
+      },
+      {
+        id: 42,
+        firstName: 'Budia',
+        lastName: 'Budiman',
+        email: 'budi.budiman@sekolahph.com',
+        profilePicture: 'http://via.placeholder.com/55x55',
+        address: '',
+        phone: '62230108',
+        mobile: '08125506000',
+        subject: '',
+        class: ''
+      }
+    ]
+  };
+
   constructor() { }
 
 
   getTeacherList() {
-    return ({
-      userId: 42,
-      firstName: 'Budia',
-      lastName: 'Budiman',
-      email: 'budi.budiman@sekolahph.com',
-      role: 'Guru',
-      profilePicture: 'http://via.placeholder.com/55x55',
-      school: {
-        name: 'Sekolah Pelita Harapan',
-        logo: 'http://via.placeholder.com/200x75'
-      }
-    });
+    return this.teacherListMock.teacherList;
   }
 
   addTeacher() {
-    return '';
+    return 'addTeacher';
   }
 
   editTeacher() {
-    return '';
+    return 'editTeacher';
   }
 
   removeTeacher() {
-    return '';
+    return 'removeTeacher';
   }
-
-  assignTeacherToClass(id, class) {
-    return '';
-  }
-
-
-
 }

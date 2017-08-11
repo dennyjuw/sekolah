@@ -7,6 +7,7 @@ export class AccountService {
 
   getUserData() {
     return ({
+      error: false,
       userId: 42,
       firstName: 'Budia',
       lastName: 'Budiman',
