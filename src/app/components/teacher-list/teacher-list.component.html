@@ -4,23 +4,42 @@
   </caption>
   <thead>
     <tr>
+      <th>&nbsp;</th>
       <th>Name</th>
-
       <th>Email</th>
       <th>Class</th>
     </tr>
   </thead>
   <tbody>
     <ng-template ngFor let-i="index" let-teacher [ngForOf]="teacherList">
-      <tr>
+      <tr class="tr-collapse-control" (click)="teacher.collapse = !teacher.collapse" [ngClass]="{'tr-collapse-control-open': teacher.collapse}">
+        <td></td>
         <td>{{teacher.firstName}} {{teacher.lastName}}</td>
         <td>{{teacher.email}}</td>
         <td>{{teacher.class}}</td>
       </tr>
-      <tr colspan="3">
-        <img src="{{teacher.profilePicture}}" />
-        Phone: {{teacher.phone}}
-        Mobile: {{teacher.mobile}}
+      <tr class="tr-collapse-content">
+        <td colspan="4">
+          <div class="padding-a-10" [collapse]="!teacher.collapse">
+            <div class="display-flex">
+              <img src="{{teacher.profilePicture}}" class="margin-r-15" />
+              <div>
+                <div>
+                  Address: {{teacher.address}}
+                </div>
+                <div>
+                  Phone: {{teacher.phone}}
+                </div>
+                <div>
+                  Mobile: {{teacher.mobile}}
+                </div>
+              </div>
+              <div class="margin-l-auto">
+                <button class="btn btn-primary" (click)="editTeacher(teacher.id)">Edit</button>
+              </div>
+            </div>
+          </div>
+        </td>
       </tr>
     </ng-template>
   </tbody>

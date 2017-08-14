@@ -1,0 +1,80 @@
+$spacing-width-initial: 0;
+$spacing-width-min: $spacing-width-initial;
+$spacing-width-max: 40;
+$spacing-width-increment: 5;
+
+.margin-l-auto {
+  margin-left: auto;
+}
+
+.margin-r-auto {
+  margin-right: auto;
+}
+
+@while $spacing-width-min <= $spacing-width-max {
+  .padding-a-#{$spacing-width-min} {
+    padding: $spacing-width-min + px !important;
+  }
+
+  .padding-t-#{$spacing-width-min} {
+    padding-top: $spacing-width-min + px !important;
+  }
+
+  .padding-b-#{$spacing-width-min} {
+    padding-bottom: $spacing-width-min + px !important;
+  }
+
+  .padding-l-#{$spacing-width-min} {
+    padding-left: $spacing-width-min + px !important;
+  }
+
+  .padding-r-#{$spacing-width-min} {
+    padding-right: $spacing-width-min + px !important;
+  }
+
+  .padding-x-#{$spacing-width-min} {
+    padding-left: $spacing-width-min + px !important;
+    padding-right: $spacing-width-min + px !important;
+  }
+
+  .padding-y-#{$spacing-width-min} {
+    padding-bottom: $spacing-width-min + px !important;
+    padding-top: $spacing-width-min + px !important;
+  }
+
+  .margin-a-#{$spacing-width-min} {
+    margin: $spacing-width-min + px !important;
+  }
+
+  .margin-t-#{$spacing-width-min} {
+    margin-top: $spacing-width-min + px !important;
+  }
+
+  .margin-b-#{$spacing-width-min} {
+    margin-bottom: $spacing-width-min + px !important;
+  }
+
+  .margin-l-#{$spacing-width-min} {
+    margin-left: $spacing-width-min + px !important;
+  }
+
+  .margin-r-#{$spacing-width-min} {
+    margin-right: $spacing-width-min + px !important;
+  }
+
+  .margin-x-#{$spacing-width-min} {
+    margin-left: $spacing-width-min + px !important;
+    margin-right: $spacing-width-min + px !important;
+  }
+
+  .margin-y-#{$spacing-width-min} {
+    margin-bottom: $spacing-width-min + px !important;
+    margin-top: $spacing-width-min + px !important;
+  }
+
+  $spacing-width-min: $spacing-width-min + $spacing-width-increment;
+
+  @if $spacing-width-min == 20 {
+    $spacing-width-increment: 10;
+  }
+}

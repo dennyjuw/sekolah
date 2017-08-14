@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { CollapseModule } from 'ngx-bootstrap';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
@@ -16,7 +18,8 @@ import { TeacherAddComponent } from './components/teacher-add/teacher-add.compon
 export const ROUTES: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'teacher', component: TeacherListComponent },
-  { path: 'teacher/:teachername', component: TeacherListComponent},
+  { path: 'teacher/add', component: TeacherAddComponent},
+  { path: 'teacher/edit/:teacherId', component: TeacherAddComponent},
   { path: 'staff', component: StaffListComponent },
   { path: 'student', component: StudentListComponent },
 ];
@@ -36,7 +39,8 @@ export const ROUTES: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    CollapseModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

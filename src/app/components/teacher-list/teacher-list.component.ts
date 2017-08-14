@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TeacherService } from '../../services/teacher/teacher.service';
-import { CollapseModule } from 'ngx-bootstrap/collapse';
 
 @Component({
   selector: 'app-teacher-list',
@@ -12,15 +12,15 @@ export class TeacherListComponent implements OnInit {
 
   teacherList;
 
-  constructor(private teacherService: TeacherService) { }
+  constructor(private teacherService: TeacherService, private router: Router) { }
 
   ngOnInit() {
     this.teacherList = this.teacherService.getTeacherList();
-    console.log(this.teacherList);
   }
 
-  trackById(index, teacher) {
-    return teacher.id;
+  editTeacher(id) {
+    //this.router.navigateByUrl('/teacher/edit/' + id);
+    this.router.navigate(['/teacher/edit', id]);
   }
 
 }
