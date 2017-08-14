@@ -1,5 +1,40 @@
 <h2>{{ (mode === 'add' ? 'Add Teacher' : 'Edit Teacher')}}</h2>
 
-<div>
-  {{teacherId}}
-</div>
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="" class="col-sm-3 control-label">First Name</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" name="teacherFirstName" placeholder="First name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="" class="col-sm-3 control-label">Last Name</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" name="teacherLastName" placeholder="Last name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="" class="col-sm-3 control-label">Email address</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" name="teacherEmailAddress" placeholder="Email address">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-sm-9">
+      <button type="submit" class="btn btn-primary">Next</button>
+      <button type="button" class="btn btn-default" (click)="onCancel(template)">Cancel</button>
+    </div>
+  </div>
+</form>
+
+<template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Confirm </h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    Are you sure you want to cancel?
+  </div>
+</template>
