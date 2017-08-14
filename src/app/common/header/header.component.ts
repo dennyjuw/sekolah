@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.userData = this.accountService.getUserData();
-    console.log(this.userData.userId);
+    console.log('header.component userId ' + this.userData.userId);
   }
 
   toggleMenu() {

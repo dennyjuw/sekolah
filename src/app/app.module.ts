@@ -11,6 +11,7 @@ import { TeacherListComponent } from './components/teacher-list/teacher-list.com
 import { StudentListComponent } from './components/student-list/student-list.component';
 import { StaffListComponent } from './components/staff-list/staff-list.component';
 import { SchoolTimetableComponent } from './components/school-timetable/school-timetable.component';
+import { TeacherAddComponent } from './components/teacher-add/teacher-add.component';
 
 export const ROUTES: Routes = [
   { path: '', component: DashboardComponent },
@@ -30,7 +31,8 @@ export const ROUTES: Routes = [
     TeacherListComponent,
     StudentListComponent,
     StaffListComponent,
-    SchoolTimetableComponent
+    SchoolTimetableComponent,
+    TeacherAddComponent
   ],
   imports: [
     BrowserModule,

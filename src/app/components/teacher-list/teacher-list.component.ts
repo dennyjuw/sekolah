@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TeacherService } from '../../services/teacher/teacher.service';
-
+import { CollapseModule } from 'ngx-bootstrap/collapse';
 
 @Component({
   selector: 'app-teacher-list',
@@ -17,6 +17,10 @@ export class TeacherListComponent implements OnInit {
   ngOnInit() {
     this.teacherList = this.teacherService.getTeacherList();
     console.log(this.teacherList);
+  }
+
+  trackById(index, teacher) {
+    return teacher.id;
   }
 
 }

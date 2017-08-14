@@ -41,6 +41,18 @@ export class TeacherService {
         mobile: '08125506000',
         subject: '',
         class: ''
+      },
+      {
+        id: 42,
+        firstName: 'Suherman',
+        lastName: 'Antara',
+        email: 'suherman.antara@sekolahph.com',
+        profilePicture: 'http://via.placeholder.com/55x55',
+        address: '',
+        phone: '62230108',
+        mobile: '08125506000',
+        subject: '',
+        class: ''
       }
     ]
   };

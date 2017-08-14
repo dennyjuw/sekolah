@@ -1,17 +1,27 @@
-<table>
+<table class="table table-standard table-hover">
   <caption>
-    Teacher list
+    <h3>Teacher list</h3>
   </caption>
   <thead>
     <tr>
-      <td>First name</td>
-      <td>Last name</td>
+      <th>Name</th>
+
+      <th>Email</th>
+      <th>Class</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let teacher of teacherList">
-      <td>{{teacher.firstName}}</td>
-      <td>{{teacher.lastName}}</td>
-    </tr>
+    <ng-template ngFor let-i="index" let-teacher [ngForOf]="teacherList">
+      <tr>
+        <td>{{teacher.firstName}} {{teacher.lastName}}</td>
+        <td>{{teacher.email}}</td>
+        <td>{{teacher.class}}</td>
+      </tr>
+      <tr colspan="3">
+        <img src="{{teacher.profilePicture}}" />
+        Phone: {{teacher.phone}}
+        Mobile: {{teacher.mobile}}
+      </tr>
+    </ng-template>
   </tbody>
 </table>
