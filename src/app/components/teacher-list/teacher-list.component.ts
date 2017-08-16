@@ -12,14 +12,14 @@ export class TeacherListComponent implements OnInit {
 
   teacherList;
 
-  constructor(private teacherService: TeacherService, private router: Router) { }
+  constructor(private teacherService: TeacherService,
+              private router: Router) { }
 
   ngOnInit() {
     this.teacherList = this.teacherService.getTeacherList();
   }
 
   editTeacher(id) {
-    //this.router.navigateByUrl('/teacher/edit/' + id);
     this.router.navigate(['/teacher/edit', id]);
   }
 

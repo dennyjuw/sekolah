@@ -14,6 +14,7 @@ export class TeacherAddComponent implements OnInit {
 
   private mode: String;
   private teacherId;
+  private teacherData;
   public modalRef: BsModalRef;
 
   constructor(
@@ -26,12 +27,16 @@ export class TeacherAddComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.params.subscribe((params) => this.teacherId = params.teacherId);
     this.mode = (this.teacherId !== undefined) ? 'edit' : 'add';
+
+    if (this.mode === 'edit') {
+      this.teacherData = this.teacherService.getTeacher(this.teacherId);
+      console.log(this.teacherData);
+    }
   }
 
   onCancel(template: TemplateRef<any>) {
     //show confirmation modal popup
     this.modalRef = this.modalService.show(template);
-    //this.router.navigate(['/teacher']);
   }
 
 }

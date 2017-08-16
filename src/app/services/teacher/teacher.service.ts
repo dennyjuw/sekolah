@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { find, parseInt } from 'lodash';
 
 @Injectable()
 export class TeacherService {
@@ -12,6 +13,7 @@ export class TeacherService {
         lastName: 'Gunawan',
         email: 'ferry.gunawann@sekolahph.com',
         profilePicture: 'http://via.placeholder.com/55x55',
+        dob: '11/06/1970',
         address: 'Jl. Merdeka Raya 5 No.12, Pluit',
         phone: '62230108',
         mobile: '08125506000',
@@ -24,6 +26,7 @@ export class TeacherService {
         lastName: 'Rajasa',
         email: 'santo.rajasa@sekolahph.com',
         profilePicture: 'http://via.placeholder.com/55x55',
+        dob: '11/06/1970',
         address: 'Jl. Merdeka Raya 5 No.12, Pluit',
         phone: '62230108',
         mobile: '08125506000',
@@ -36,6 +39,7 @@ export class TeacherService {
         lastName: 'Budiman',
         email: 'budi.budiman@sekolahph.com',
         profilePicture: 'http://via.placeholder.com/55x55',
+        dob: '11/06/1970',
         address: 'Jl. Merdeka Raya 5 No.12, Pluit',
         phone: '62230108',
         mobile: '08125506000',
@@ -43,11 +47,12 @@ export class TeacherService {
         class: ''
       },
       {
-        id: 42,
+        id: 52,
         firstName: 'Suherman',
         lastName: 'Antara',
         email: 'suherman.antara@sekolahph.com',
         profilePicture: 'http://via.placeholder.com/55x55',
+        dob: '11/06/1970',
         address: 'Jl. Merdeka Raya 5 No.12, Pluit',
         phone: '62230108',
         mobile: '08125506000',
@@ -59,9 +64,14 @@ export class TeacherService {
 
   constructor() { }
 
-
   getTeacherList() {
     return this.teacherListMock.teacherList;
+  }
+
+  getTeacher(teacherId) {
+    let teacherList: Array<Object> = this.teacherListMock.teacherList;
+    let teacherData = find(teacherList, ['id', parseInt(teacherId)]);
+    return teacherData;
   }
 
   addTeacher() {

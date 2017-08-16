@@ -23,9 +23,19 @@ table {
     outline: 0;
   }
 
-  .tr-collapse-control-open td {
-    background: $darkSky;
-    color: $white;
+  .tr-collapse-control {
+    i.fa {
+      transition: all .2s;
+    }
+
+    &.tr-collapse-control-open td {
+      background: $darkSky;
+      color: $white;
+    }
+
+    &.tr-collapse-control-open i.fa {
+      transform: rotate(90deg);
+    }
   }
 }
 
