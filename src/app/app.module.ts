@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { CollapseModule, ModalModule, DatepickerModule } from 'ngx-bootstrap';
@@ -39,6 +40,7 @@ export const ROUTES: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(ROUTES),
     CollapseModule.forRoot(),
     ModalModule.forRoot(),

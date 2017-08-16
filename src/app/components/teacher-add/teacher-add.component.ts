@@ -12,7 +12,7 @@ import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';
 })
 export class TeacherAddComponent implements OnInit {
 
-  private mode: String;
+  private formMode: String;
   private teacherId;
   private teacherData;
   public modalRef: BsModalRef;
@@ -26,11 +26,11 @@ export class TeacherAddComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.params.subscribe((params) => this.teacherId = params.teacherId);
-    this.mode = (this.teacherId !== undefined) ? 'edit' : 'add';
+    this.formMode = (this.teacherId !== undefined) ? 'edit' : 'add';
+    console.log('formMode' + this.formMode);
 
-    if (this.mode === 'edit') {
+    if (this.formMode === 'edit') {
       this.teacherData = this.teacherService.getTeacher(this.teacherId);
-      console.log(this.teacherData);
     }
   }
 

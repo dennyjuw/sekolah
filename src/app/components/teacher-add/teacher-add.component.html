@@ -1,28 +1,28 @@
-<h2>{{ (mode === 'add' ? 'Add Teacher' : 'Edit Teacher')}}</h2>
+<h2>{{ (formMode === 'add' ? 'Add Teacher' : 'Edit Teacher') }}</h2>
 
-<form class="form-horizontal">
+<form #teacherForm="ngForm" class="form-horizontal">
   <div class="form-group">
-    <label for="" class="col-sm-3 control-label">First Name</label>
+    <label for="teacherFirstName" class="col-sm-3 control-label">First Name</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" name="teacherFirstName" placeholder="First name" value="{{teacherData.firstName}}">
+      <input type="text" class="form-control" id="teacherFirstName" name="teacherFirstName" placeholder="First name" [(ngModel)]="teacherData.firstName">
     </div>
   </div>
   <div class="form-group">
     <label for="" class="col-sm-3 control-label">Last Name</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" name="teacherLastName" placeholder="Last name" value="{{teacherData.lastName}}">
+      <input type="text" class="form-control" name="teacherLastName" placeholder="Last name" [(ngModel)]="teacherData.lastName">
     </div>
   </div>
   <div class="form-group">
     <label for="" class="col-sm-3 control-label">Email address</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" name="teacherEmailAddress" placeholder="Email address" value="{{teacherData.email}}">
+      <input type="text" class="form-control" name="teacherEmailAddress" placeholder="Email address" [(ngModel)]="teacherData.email">
     </div>
   </div>
   <div class="form-group">
     <label for="" class="col-sm-3 control-label">Dob</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" name="teacherDob" placeholder="Dob" value="{{teacherData.dob}}">
+      <input type="text" class="form-control" name="teacherDob" placeholder="Dob" [(ngModel)]="teacherData.dob">
     </div>
   </div>
   <div class="form-group">
@@ -34,13 +34,13 @@
   <div class="form-group">
     <label for="" class="col-sm-3 control-label">Phone number</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" name="teacherPhone" placeholder="Phone number" value="{{teacherData.phone}}">
+      <input type="text" class="form-control" name="teacherPhone" placeholder="Phone number" [(ngModel)]="teacherData.phone">
     </div>
   </div>
   <div class="form-group">
     <label for="" class="col-sm-3 control-label">Mobile number</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" name="teacherMobile" placeholder="Mobile number" value="{{teacherData.mobile}}">
+      <input type="text" class="form-control" name="teacherMobile" placeholder="Mobile number" [(ngModel)]="teacherData.mobile">
     </div>
   </div>
   <hr>
