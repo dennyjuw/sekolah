@@ -46,7 +46,7 @@
   <hr>
   <div class="form-group">
     <div class="col-sm-offset-3 col-sm-9">
-      <button type="submit" class="btn btn-primary">Next</button>
+      <button type="submit" class="btn btn-primary">{{ (formMode === 'add' ? 'Add' : 'Save') }}</button>
       <button type="button" class="btn btn-default" (click)="onCancel(confirmCancelModal)">Cancel</button>
     </div>
   </div>
