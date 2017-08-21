@@ -2,15 +2,35 @@
   <ul>
     <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" >Dashboard</a></li>
   </ul>
-  <ul>
-    <li><a routerLink="/teacher" routerLinkActive="active">Teacher list</a></li>
-  </ul>
-  <ul>
-    <li><a routerLink="/staff" routerLinkActive="active">Staff list</a></li>
-    <li><a routerLink="/student" routerLinkActive="active">Student list</a></li>
-    <li>School performance</li>
-  </ul>
-  <ul>
-    <li>Messaging</li>
-  </ul>
+  <div class="nav-section">
+    <h3>School</h3>
+    <ul>
+      <li>Class</li>
+      <li>Subject</li>
+      <li>Performance</li>
+    </ul>
+  </div>
+  <div class="nav-section">
+    <h3>Student</h3>
+    <ul>
+      <li><a routerLink="/student" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Student list</a></li>
+      <li><a routerLink="/student/add" routerLinkActive="active">Add student</a></li>
+      <li><a routerLink="/student/add" routerLinkActive="active">Progress</a></li>
+    </ul>
+  </div>
+  <div class="nav-section">
+    <h3>Staff</h3>
+    <ul>
+      <li><a routerLink="/teacher" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Teacher list</a></li>
+      <li><a routerLink="/teacher/add" routerLinkActive="active">Add teacher</a></li>
+      <li><a routerLink="/staff" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Staff list</a></li>
+    </ul>
+  </div>
+  <div class="nav-section">
+    <h3>Messages</h3>
+    <ul>
+      <li>Inbox</li>
+      <li>Sent</li>
+    </ul>
+  </div>
 </nav>

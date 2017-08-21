@@ -1,0 +1,51 @@
+@import '~app/styles/variables.scss';
+
+header {
+  background-color: $phthaloBlue;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+.header-school-logo {
+  color: $white;
+}
+
+.header-user {
+  color: $white;
+  padding: 10px;
+
+  .header-user-name {
+    font-weight: bold;
+    margin-top: 7px;
+  }
+
+  .header-user-pic {
+    border-radius: 50%;
+    margin-right: 10px;
+    overflow: hidden
+  }
+}
+
+.side-nav {
+  background-color: $whiteSmoke;
+  box-shadow: inset -1px 0 0 0 $mercury;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  padding-top: 95px;
+  width: 250px;
+}
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+nav li a.active {
+  font-weight: bold;
+}
+
+.nav-section {
+  border-bottom: solid $mercury 1px;
+}

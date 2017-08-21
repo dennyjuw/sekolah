@@ -1,46 +1,26 @@
 <h2>{{ (formMode === 'add' ? 'Add Teacher' : 'Edit Teacher') }}</h2>
 
-<form #teacherForm="ngForm" class="form-horizontal">
+<form #teacherForm="ngForm" (ngSubmit)="onSubmit()" class="form-horizontal">
   <div class="form-group">
     <label for="teacherFirstName" class="col-sm-3 control-label">First Name</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" id="teacherFirstName" name="teacherFirstName" placeholder="First name" [(ngModel)]="teacherData.firstName">
+      <input type="text" class="form-control" id="teacherFirstName" name="teacherFirstName" placeholder="First name" required
+        [(ngModel)]="teacherData.firstName"
+        #firstName="ngModel">
+      <div [hidden]="firstName.valid || firstName.pristine" class="alert alert-danger">
+        First name is required
+      </div>
     </div>
   </div>
   <div class="form-group">
-    <label for="" class="col-sm-3 control-label">Last Name</label>
+    <label for="teacherLastName" class="col-sm-3 control-label">First Name</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" name="teacherLastName" placeholder="Last name" [(ngModel)]="teacherData.lastName">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="" class="col-sm-3 control-label">Email address</label>
-    <div class="col-sm-9">
-      <input type="text" class="form-control" name="teacherEmailAddress" placeholder="Email address" [(ngModel)]="teacherData.email">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="" class="col-sm-3 control-label">Dob</label>
-    <div class="col-sm-9">
-      <input type="text" class="form-control" name="teacherDob" placeholder="Dob" [(ngModel)]="teacherData.dob">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="" class="col-sm-3 control-label">Profile Picture</label>
-    <div class="col-sm-9">
-      <input type="text" class="form-control" name="teacherProfilePicture" placeholder="Profile picture">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="" class="col-sm-3 control-label">Phone number</label>
-    <div class="col-sm-9">
-      <input type="text" class="form-control" name="teacherPhone" placeholder="Phone number" [(ngModel)]="teacherData.phone">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="" class="col-sm-3 control-label">Mobile number</label>
-    <div class="col-sm-9">
-      <input type="text" class="form-control" name="teacherMobile" placeholder="Mobile number" [(ngModel)]="teacherData.mobile">
+      <input type="text" class="form-control" id="teacherLastName" name="teacherLastName" placeholder="Last name" required
+        [(ngModel)]="teacherData.lastName"
+        #lastName="ngModel">
+      <div [hidden]="lastName.valid || lastName.pristine" class="alert alert-danger">
+        Last name is required
+      </div>
     </div>
   </div>
   <hr>

@@ -14,7 +14,19 @@ export class TeacherAddComponent implements OnInit {
 
   private formMode: String;
   private teacherId;
-  private teacherData;
+  private teacherData = {
+    id: 0,
+    firstName: '',
+    lastName: '',
+    email: '',
+    profilePicture: '',
+    dob: '',
+    address: '',
+    phone: '',
+    mobile: '',
+    subject: '',
+    class: ''
+  };
   public modalRef: BsModalRef;
 
   constructor(
@@ -27,7 +39,6 @@ export class TeacherAddComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.params.subscribe((params) => this.teacherId = params.teacherId);
     this.formMode = (this.teacherId !== undefined) ? 'edit' : 'add';
-    console.log('formMode' + this.formMode);
 
     if (this.formMode === 'edit') {
       this.teacherData = this.teacherService.getTeacher(this.teacherId);
@@ -39,4 +50,9 @@ export class TeacherAddComponent implements OnInit {
     this.modalRef = this.modalService.show(template);
   }
 
+  onSubmit() {}
+
+  get diagnostic() {
+    return JSON.stringify(this.teacherData);
+  }
 }
