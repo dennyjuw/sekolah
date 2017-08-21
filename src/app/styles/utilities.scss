@@ -3,12 +3,84 @@ $spacing-width-min: $spacing-width-initial;
 $spacing-width-max: 40;
 $spacing-width-increment: 5;
 
+/* Position */
 
+.relative {
+  position: relative;
+}
 
-/* Layout */
+.absolute {
+  position: absolute;
+}
+
+// display
+
+.display-block {
+  display: block;
+  width: 100%;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
+
+.display-table {
+  display: table;
+  width: 100%;
+}
 
 .display-flex {
   display: flex;
+
+  &.flex-start {
+    justify-content: flex-start;
+  }
+
+  &.center {
+    justify-content: center;
+  }
+
+  &.space-between {
+    justify-content: space-between;
+  }
+
+  &.flex-end {
+    justify-content: flex-end;
+  }
+
+  &.flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  &.flex-nowrap {
+    flex-wrap: nowrap;
+  }
+
+  .align-self-start {
+    align-self: start;
+  }
+}
+
+/* vertical align */
+
+.v-align-top {
+  vertical-align: top;
+}
+
+.v-align-text-top {
+  vertical-align: text-top;
+}
+
+.v-align-middle {
+  vertical-align: middle;
+}
+
+.v-align-bottom {
+  vertical-align: bottom;
+}
+
+.v-align-text-bottom {
+  vertical-align: text-bottom;
 }
 
 /* Spacing */
