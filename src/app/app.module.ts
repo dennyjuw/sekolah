@@ -16,6 +16,7 @@ import { StaffListComponent } from './components/staff-list/staff-list.component
 import { SchoolTimetableComponent } from './components/school-timetable/school-timetable.component';
 import { TeacherAddComponent } from './components/teacher-add/teacher-add.component';
 import { SchoolClassComponent } from './components/school-class/school-class.component';
+import { SchoolClassEditComponent } from './components/school-class-edit/school-class-edit.component';
 
 export const ROUTES: Routes = [
   { path: '', component: DashboardComponent },
@@ -25,6 +26,7 @@ export const ROUTES: Routes = [
   { path: 'staff', component: StaffListComponent },
   { path: 'student', component: StudentListComponent },
   { path: 'school/class', component: SchoolClassComponent },
+  { path: 'school/class/edit/:classId', component: SchoolClassEditComponent},
 ];
 
 @NgModule({
@@ -39,7 +41,8 @@ export const ROUTES: Routes = [
     StaffListComponent,
     SchoolTimetableComponent,
     TeacherAddComponent,
-    SchoolClassComponent
+    SchoolClassComponent,
+    SchoolClassEditComponent
   ],
   imports: [
     BrowserModule,

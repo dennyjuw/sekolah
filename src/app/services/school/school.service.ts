@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { find, parseInt } from 'lodash';
 
 @Injectable()
 export class SchoolService {
@@ -278,5 +279,11 @@ export class SchoolService {
 
   getClassList() {
     return this.classListMock.classList;
+  }
+
+  getClass(classId) {
+    let classList: Array<Object> = this.classListMock.classList;
+    let classData = find(classList, ['id', parseInt(classId)]);
+    return classData;
   }
 }

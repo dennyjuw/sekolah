@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SchoolService } from '../../services/school/school.service';
 
 @Component({
@@ -11,13 +12,16 @@ export class SchoolClassComponent implements OnInit {
 
   classList;
 
-  constructor(private schoolService: SchoolService) { }
+  constructor(
+    private schoolService: SchoolService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.classList = this.schoolService.getClassList();
   }
 
   editClass(classId) {
-    alert('editClass ' + classId);
+    this.router.navigate(['/school/class/edit', classId]);
   }
 }
