@@ -8,9 +8,8 @@ export class TeacherService {
     error: false,
     teacherList: [
       {
-        id: 22,
-        firstName: 'Ferry',
-        lastName: 'Gunawan',
+        id: 10,
+        name: 'Ferry Gunawan',
         email: 'ferry.gunawann@sekolahph.com',
         profilePicture: 'http://via.placeholder.com/55x55',
         dob: '11/06/1970',
@@ -21,9 +20,8 @@ export class TeacherService {
         class: ''
       },
       {
-        id: 32,
-        firstName: 'Santo',
-        lastName: 'Rajasa',
+        id: 20,
+        name: 'Santo Rajasa',
         email: 'santo.rajasa@sekolahph.com',
         profilePicture: 'http://via.placeholder.com/55x55',
         dob: '11/06/1970',
@@ -34,9 +32,8 @@ export class TeacherService {
         class: ''
       },
       {
-        id: 42,
-        firstName: 'Budia',
-        lastName: 'Budiman',
+        id: 30,
+        name: 'Budia Budiman',
         email: 'budi.budiman@sekolahph.com',
         profilePicture: 'http://via.placeholder.com/55x55',
         dob: '11/06/1970',
@@ -47,9 +44,8 @@ export class TeacherService {
         class: ''
       },
       {
-        id: 52,
-        firstName: 'Suherman',
-        lastName: 'Antara',
+        id: 40,
+        name: 'Suherman Antara',
         email: 'suherman.antara@sekolahph.com',
         profilePicture: 'http://via.placeholder.com/55x55',
         dob: '11/06/1970',

@@ -1,0 +1,40 @@
+<table class="table table-standard table-hover">
+  <caption>
+    <h3>Class list</h3>
+  </caption>
+  <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th>Class</th>
+      <th>Type</th>
+      <th>Teacher</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-template ngFor let-i="index" let-class [ngForOf]="classList">
+      <tr class="tr-collapse-control" (click)="class.collapse = !class.collapse" [ngClass]="{'tr-collapse-control-open': class.collapse}">
+        <td><i class="fa fa-chevron-right" aria-hidden="true"></i></td>
+        <td>{{class.className}}</td>
+        <td>{{class.classType}}</td>
+        <td>{{class.homeTeacher.teacherName}}</td>
+      </tr>
+      <tr class="tr-collapse-content">
+        <td colspan="4">
+          <div class="padding-a-10" [collapse]="!class.collapse">
+            <div class="display-flex">
+              <div>
+                <h4>Subject list</h4>
+                <ol>
+                  <li *ngFor="let subject of class.subject">{{subject.subjectName}}</li>
+                </ol>
+              </div>
+              <div class="margin-l-auto">
+                <button class="btn btn-primary" (click)="editClass(class.id)">Edit</button>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </ng-template>
+  </tbody>
+</table>

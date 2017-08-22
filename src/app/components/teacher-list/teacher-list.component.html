@@ -14,7 +14,7 @@
     <ng-template ngFor let-i="index" let-teacher [ngForOf]="teacherList">
       <tr class="tr-collapse-control" (click)="teacher.collapse = !teacher.collapse" [ngClass]="{'tr-collapse-control-open': teacher.collapse}">
         <td><i class="fa fa-chevron-right" aria-hidden="true"></i></td>
-        <td>{{teacher.firstName}} {{teacher.lastName}}</td>
+        <td>{{teacher.name}}</td>
         <td>{{teacher.email}}</td>
         <td>{{teacher.class}}</td>
       </tr>
